@@ -40,7 +40,7 @@ datacheck_addin <- function() {
       code2 <- paste("assign('info', read.csv('", gsub("\\\\", "/", input$info_path), "', stringsAsFactors = FALSE))", sep = "")
 
       if (input$id == "") return(errorMessage("id", "ID variable is not specified"))
-      code3 <- paste("Lmisc::inspect.data(data = data, info = info, id ='", input$id, "', plot =", input$plot, ", outdir = getwd())")
+      code3 <- paste("inspect.data(data = data, info = info, id ='", input$id, "', plot =", input$plot, ", outdir = getwd())", sep = "")
 
       code <- paste(c(code1, code2, code3), collapse = "\n")
       if (input$check != 0) eval(parse(text = code))

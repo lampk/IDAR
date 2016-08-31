@@ -11,7 +11,6 @@
 #' @return .csv file that contains list of potential errors
 #' @export
 inspect.data <- function(data, info, id, check_missing, plot = FALSE, prefix = "", outdir){
-  requireNamespace("lubridate")
   
   if (missing(outdir)) outdir <- "."
 
