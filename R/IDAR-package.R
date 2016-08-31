@@ -4,5 +4,5 @@
 #'
 #' @name IDAR
 #' @docType package
-#' @import shiny miniUI rstudioapi lubridate
+#' @import shiny miniUI rstudioapi lubridate rhandsontable
 NULL

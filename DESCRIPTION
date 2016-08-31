@@ -9,10 +9,4 @@ Description: This package contains useful R functions and Rstudio Addins to
 License: CC0
 Encoding: UTF-8
 LazyData: true
-Imports:
-    lubridate,
-    rhandsontable,
-    shiny,
-    miniUI,
-    rstudioapi
 RoxygenNote: 5.0.1
