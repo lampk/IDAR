@@ -1,0 +1,9 @@
+Name: Data checking: Create info for checking
+Description: Create a csv file for data checking.
+Binding: datacheck_createinfo_addin
+Interactive: true
+
+Name: Data checking: Check data
+Description: Check a dataset based on pre-defined information.
+Binding: datacheck_addin
+Interactive: true
