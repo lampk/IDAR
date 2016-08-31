@@ -11,6 +11,8 @@
 #' @return .csv file that contains list of potential errors
 #' @export
 inspect.data <- function(data, info, id, check_missing, plot = FALSE, prefix = "", outdir){
+  requireNamespace("lubridate")
+  
   if (missing(outdir)) outdir <- "."
 
   # select variables to check
@@ -51,7 +53,7 @@ inspect.data <- function(data, info, id, check_missing, plot = FALSE, prefix = "
           barplot(table(data[, info$varname[i]]), main = info$varname[i])
 
         } else {
-          if (lubridate:::is.POSIXct(data[, info$varname[i]])) {
+          if (is.POSIXct(data[, info$varname[i]])) {
             boxplot(as.Date(data[, info$varname[i]]), main = info$varname[i])
           } else {
             boxplot(data[, info$varname[i]], main = info$varname[i])
