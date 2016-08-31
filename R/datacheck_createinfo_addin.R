@@ -2,6 +2,8 @@
 #'
 #' @export
 datacheck_createinfo_addin <- function() {
+  requireNamespace("shiny", quietly = TRUE)
+  requireNamespace("miniUI", quietly = TRUE)
 
   ## ui
   ui <- miniPage(
